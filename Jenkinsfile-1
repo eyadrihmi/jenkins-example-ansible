@@ -7,7 +7,7 @@ pipeline {
             steps {
             
             git 'https://github.com/eyadrihmi/jenkins-example-ansible.git'
-            }
+            }}
             
     stage('Hello') {
       steps {
