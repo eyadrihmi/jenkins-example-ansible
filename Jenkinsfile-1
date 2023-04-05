@@ -1,17 +1,14 @@
 pipeline {
     agent any
 
-    tools {
-        nodejs 'NODE_HOME'
-    }
-
-  stages {
-  
-    stage('Git') { // for display purposes
-        // Get some code from a GitHub repository
-       git 'https://github.com/eyadrihmi/jenkins-example-ansible.git'
-       
-    }
+     stages {
+        
+                stage('git') {
+            steps {
+            
+            git 'https://github.com/eyadrihmi/jenkins-example-ansible.git'
+            }
+            
     stage('Hello') {
       steps {
         sh '''
